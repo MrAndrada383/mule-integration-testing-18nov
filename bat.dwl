@@ -17,8 +17,8 @@ suite("ticket-checkin-test-suite") in [
         "numBags": 2
       }
     } assert [
-      $.response.status mustEqual 200,      
-      $.response.headers.'Content-Type' must contain("application/json")
+      $.response.status mustEqual 200,
+      $.response.headers.'Content-Type' mustMatch /application\/json.*/
     ] execute [
       log($.response)
     ]
